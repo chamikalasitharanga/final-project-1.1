@@ -19,19 +19,19 @@
             <div class="form login">
                 <div class="form-content">
                     <header>Login</header>
-                    <form action="#">
+                    <form action="login1.php" method="post">
                         <div class="field input-field">
-                            <input type="email" placeholder="Email" class="input">
+                            <input type="text" name="username" placeholder="User Name" class="input">
                         </div>
 
                         <div class="field input-field">
-                            <input type="password" placeholder="Password" class="password">
+                            <input type="password" name="password" placeholder="Password" class="password">
                             <i class='bx bx-hide eye-icon'></i>
                         </div>
 
-                        <div class="form-link">
+                        <!-- <div class="form-link">
                             <a href="#" class="forgot-pass">Forgot password?</a>
-                        </div>
+                        </div> -->
 
                         <div class="field button-field">
                             <button>Login</button>
@@ -43,7 +43,7 @@
                     </div>
                 </div>
 
-                <div class="line"></div>
+                <!-- <div class="line"></div>
 
                 <div class="media-options">
                     <a href="#" class="field facebook">
@@ -57,7 +57,7 @@
                         <img src="google.png" alt="" class="google-img">
                         <span>Login with Google</span>
                     </a>
-                </div>
+                </div> -->
 
             </div>
 
@@ -66,22 +66,26 @@
             <div class="form signup">
                 <div class="form-content">
                     <header>Signup</header>
-                    <form action="#">
+                    <form action="register.php" method="POST">
                         <div class="field input-field">
-                            <input type="email" placeholder="Email" class="input">
+                            <input type="text" name="username" placeholder="User Name" class="input">
                         </div>
 
                         <div class="field input-field">
-                            <input type="password" placeholder="Create password" class="password">
+                            <input type="email" name="email" placeholder="Email" class="input">
                         </div>
 
                         <div class="field input-field">
-                            <input type="password" placeholder="Confirm password" class="password">
+                            <input type="password" name="password" placeholder="Create password" class="password">
+                        </div>
+
+                        <div class="field input-field">
+                            <input type="password" name="confirm" placeholder="Confirm password" class="password">
                             <i class='bx bx-hide eye-icon'></i>
                         </div>
 
                         <div class="field button-field">
-                            <button>Signup</button>
+                            <button type="submit">Signup</button>
                         </div>
                     </form>
 
@@ -90,9 +94,9 @@
                     </div>
                 </div>
 
-                <div class="line"></div>
+                <!-- <div class="line"></div> -->
 
-                <div class="media-options">
+                <!-- <div class="media-options">
                     <a href="#" class="field facebook">
                         <i class='bx bxl-facebook facebook-icon'></i>
                         <span>Login with Facebook</span>
@@ -104,7 +108,7 @@
                         <img src="google.png" alt="" class="google-img">
                         <span>Login with Google</span>
                     </a>
-                </div>
+                </div> -->
 
             </div>
         </section>

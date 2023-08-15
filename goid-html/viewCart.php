@@ -87,7 +87,7 @@
                                         
                                         <?php 
                                             if($total>1){
-                                               echo "<a href='checkout.php' class='btn btn-primary'><i class='fa-solid fa-credit-card'></i>&nbsp;&nbsp;Checkout</a>";
+                                               echo "<a href='order.php' class='btn btn-primary'><i class='fa-solid fa-check'></i>&nbsp;&nbsp;Confirm</a>";
                                             }else{
                                                 echo "<button class='btn btn-primary' disabled><i class='fa-solid fa-credit-card'></i>&nbsp;&nbsp;Checkout</button>";
                                             }
