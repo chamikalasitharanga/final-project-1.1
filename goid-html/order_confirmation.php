@@ -1,28 +1,64 @@
+<?php
+
+include_once('../goid-html/config/connection.php');
+
+session_start();
+
+if (isset($_SESSION['myCart']) && !empty($_SESSION['myCart'])) {
+    
+    $name = $_POST['name'];
+    $phone = $_POST['phone'];
+    
+    $total = 0;
+    foreach ($_SESSION['myCart'] as $key => $value) {
+        $total += $value['price'] * $value['itemqty'];
+    }
+
+    
+    $insertOrderQuery = "INSERT INTO orders (customer_name, customer_phone, order_total) VALUES ('$name', '$phone', '$total')";
+    mysqli_query($con, $insertOrderQuery);
+
+    
+    $orderId = mysqli_insert_id($con);
+
+   
+    foreach ($_SESSION['myCart'] as $key => $value) {
+        $itemName = $value['fname'];
+        $itemQty = $value['itemqty'];
+        $itemPrice = $value['price'];
+        $subtotal = $itemQty * $itemPrice;
+
+        $insertItemQuery = "INSERT INTO order_items (order_id, item_name, item_quantity, item_price, subtotal) VALUES ('$orderId', '$itemName', '$itemQty', '$itemPrice', '$subtotal')";
+        mysqli_query($con, $insertItemQuery);
+    }
+
+    
+    $_SESSION['myCart'] = array();
+
+    echo "Order placed successfully!";
+} else {
+    echo "Your cart is empty. Please go back and order.";
+}
+?>
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Order Confirmation</title>
+    <title>Order</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
 <body>
 <div class="container mt-5">
-    <h2>Your order is in process</h2>
+    <h2>Your Order</h2>
     <?php
-    session_start();
-    if (isset($_SESSION['myCart']) && !empty($_SESSION['myCart'])) {
-        echo '<h4>Your order details:</h4>';
-        echo '<ul>';
-        foreach ($_SESSION['myCart'] as $key => $value) {
-            echo '<li>' . $value['itemqty'] . ' x ' . $value['fname'] . ' -price: ' . $value['price'] . '</li>';
-        }
-        echo '</ul>';
-        echo '<h4>Customer Information:</h4>';
-        echo '<p>Name: ' . $_POST['name'] . '</p>';
-        echo '<p>Phone: ' . $_POST['phone'] . '</p>';
-        echo '<p>Pickup Time: ' . $_POST['pickupTime'] . '</p>';
-    } else {
-        echo '<p>Your cart is empty. Please go back and order.</p>';
-    }
+        $getOrderQuery = "SELECT * FROM orders WHERE order_id = '$orderId'";
+        $result = mysqli_query($con, $getOrderQuery);
+        $order = mysqli_fetch_assoc($result);
+
+        echo '<h4>Order Details:</h4>';
+        echo '<p>Order ID: ' . $order['order_id'] . '</p>';
+        echo '<p>Customer Name: ' . $order['customer_name'] . '</p>';
+        echo '<p>Customer Phone: ' . $order['customer_phone'] . '</p>';
+        echo '<p>Order ID: ' . $order['order_total'] . '</p>';
     ?>
     <a href="category.php" class="btn btn-primary mt-3">Back to Menu</a>
 </div>

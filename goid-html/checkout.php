@@ -16,10 +16,10 @@
             <label for="phone">Phone:</label>
             <input type="tel" class="form-control" id="phone" name="phone" required>
         </div>
-        <div class="form-group">
+        <!-- <div class="form-group">
             <label for="pickupTime">Pickup Time:</label>
             <input type="datetime-local" class="form-control" id="pickupTime" name="pickupTime" required>
-        </div>
+        </div> -->
         <h3>Items in Your Cart:</h3>
         <ul>
             <?php
