@@ -35,36 +35,38 @@
 </head>
 
 <body>
-  
+<div class="hero_area">
     <!-- header section strats -->
     <nav class="navbar navbar-expand-custom navbar-mainbg">
-        <a class="navbar-brand navbar-logo" href="#">Good Food</a>
-        <button class="navbar-toggler" type="button" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <i class="fas fa-bars text-white"></i>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav ml-auto">
-                <div class="hori-selector"><div class="left"></div><div class="right"></div></div>
-                <li class="nav-item">
-                    <a class="nav-link" href="about.html"><i class="fas fa-tachometer-alt"></i>About us</a>
-                </li>
-                <li class="nav-item active">
-                    <a class="nav-link" href="category.php"><i class="far fa-address-book"></i>Categoriees</a>
-                </li>
-                
-                <li class="nav-item">
-                    <a class="nav-link" href="login.html"><i class="far fa-calendar-alt"></i>Loging</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="javascript:void(0);"><i class="far fa-chart-bar"></i>Sign up</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="cart.php"><i class="far fa-copy"></i>Cart</a>
-                </li>
-            </ul>
-        </div>
-    </nav>
+      <a class="logosunera" href="#">
 
+        <img src="/Applications/XAMPP/xamppfiles/htdocs/final-project/goid-html/images/logosunera.png">
+       </a>
+      <button class="navbar-toggler" type="button" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <i class="fas fa-bars text-white"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto">
+              <div class="hori-selector"><div class="left"></div><div class="right"></div></div>
+              <li class="nav-item active">
+                  <a class="nav-link" href=""><i class="fas fa-tachometer-alt"></i>Home</a>
+              </li>
+              <li class="nav-item ">
+                  <a class="nav-link" href="about.html"><i class="far fa-address-book"></i>About us</a>
+              </li>
+              
+              <li class="nav-item">
+                  <a class="nav-link" href="login.html"><i class="far fa-calendar-alt"></i>Loging</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="contact.html"><i class="far fa-chart-bar"></i>Contact</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="cart.php"><i class="far fa-copy"></i>Cart</a>
+              </li>
+          </ul>
+      </div>
+  </nav>
   <div class="hero_area"> 
     <!-- end header section -->
     
@@ -281,10 +283,10 @@
                 </div>
                 <div class="detail-box">
                   <h4>
-                    $30
+                    Rs:590.00
                   </h4>
                   <p>
-                    There are many variations of passages of Lorem Ipsum available,
+                    Chicken submarine with chicken piece
                   </p>
                   <a href="">
                     Order Now
@@ -299,10 +301,10 @@
                 </div>
                 <div class="detail-box">
                   <h4>
-                    $30
+                    Rs:100.00
                   </h4>
                   <p>
-                    There are many variations of passages of Lorem Ipsum available,
+                    Rotti with lunumiris
                   </p>
                   <a href="">
                     Order Now
@@ -317,10 +319,10 @@
                 </div>
                 <div class="detail-box">
                   <h4>
-                    $30
+                    Rs.780.00
                   </h4>
                   <p>
-                    There are many variations of passages of Lorem Ipsum available,
+                    Healthy rice set menu
                   </p>
                   <a href="">
                     Order Now
